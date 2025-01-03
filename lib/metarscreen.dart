@@ -86,7 +86,7 @@ class MetarScreenState extends State<MetarScreen> {
                 ),
               ),
               child: Text(
-                'Get METAR and TAF',
+                'Get METAR and TAF.',
                 style: TextStyle(color: Colors.white),
               ),
             ),

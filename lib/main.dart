@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:metar/metarscreen.dart';
+import 'package:metar/themeprovider.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(
-    const MyApp(),
+    ChangeNotifierProvider(
+      create: (context) => ThemeProvider(),
+      child: const MyApp(),
+    ),
   );
 }
 
@@ -15,6 +20,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: MetarScreen(),
+      theme: Provider.of<ThemeProvider>(context).themeData,
     );
   }
 }
